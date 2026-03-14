@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quill — Write code the way you think.</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/quill-icon.svg"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────────────────── -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#home">
+      <img src="assets/img/quill-icon.svg" alt="Quill" class="nav-icon"/>
+      <span>Quill</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#install">Install</a></li>
+      <li><a href="#tour">Language Tour</a></li>
+      <li><a href="#fields">Use Cases</a></li>
+      <li><a href="#examples">Examples</a></li>
+      <li><a href="#docs">Docs</a></li>
+      <li><a href="#download" class="btn-nav">Download</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+
+<!-- ── Hero ───────────────────────────────────────────────────────── -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <div class="hero-badge">✨ Version 2.0 — Now with AI, GUI &amp; Database support</div>
+    <img src="assets/img/quill-icon.svg" alt="Quill Feather" class="hero-icon"/>
+    <h1 class="hero-title">
+      Write code<br/>
+      <span class="gradient-text">the way you think.</span>
+    </h1>
+    <p class="hero-sub">
+      Quill is the world's most readable programming language.<br/>
+      The only symbols you'll ever type are <code class="inline-code">,</code> and <code class="inline-code">.</code>
+    </p>
+    <div class="hero-code">
+      <div class="code-window">
+        <div class="code-toolbar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-filename">hello.ql</span>
+        </div>
+        <pre class="code-body" id="heroCode"></pre>
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a href="#install" class="btn btn-primary">Get Started Free</a>
+      <a href="#tour" class="btn btn-ghost">See the Language →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-n">2</span><span class="stat-l">Symbols only</span></div>
+      <div class="stat"><span class="stat-n">15+</span><span class="stat-l">Stdlib modules</span></div>
+      <div class="stat"><span class="stat-n">10+</span><span class="stat-l">Fields supported</span></div>
+      <div class="stat"><span class="stat-n">Free</span><span class="stat-l">Open source MIT</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Features ───────────────────────────────────────────────────── -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Why Quill?</span>
+      <h2>A language that gets out of your way</h2>
+      <p>No memorizing symbols. No googling syntax. Just describe what you want to do.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📖</div>
+        <h3>Plain English Syntax</h3>
+        <p>Every statement reads like a sentence. If you can describe it, you can code it. No braces, no semicolons, no symbols.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3>Professional GUI</h3>
+        <p>Build beautiful dark-mode apps with charts, tables, progress bars, and modern widgets — in plain English.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3>AI &amp; Machine Learning</h3>
+        <p>Built-in ML algorithms: Naive Bayes, k-NN, linear regression, k-means — zero dependencies required.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🗄️</div>
+        <h3>Database Support</h3>
+        <p>SQLite built right in. Create, query, update, delete — all in English sentences.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3>HTTP &amp; Web</h3>
+        <p>Fetch URLs, build HTTP servers, call REST APIs, parse JSON — with dead-simple syntax.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔗</div>
+        <h3>Python Interop</h3>
+        <p>Use any Python library from Quill. Pandas, NumPy, scikit-learn, requests — all accessible.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Cryptography</h3>
+        <p>SHA-256 hashing, HMAC, base64, Caesar cipher, XOR encryption — security in plain English.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⛓️</div>
+        <h3>Blockchain</h3>
+        <p>Learn blockchain concepts with a real implementation — mining, validation, transactions — all in Quill.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎮</div>
+        <h3>Quill Quest</h3>
+        <p>Learn Quill through an interactive game. 15 levels from Hello World to building a full GUI app.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Install ─────────────────────────────────────────────────────── -->
+<section class="section section-dark" id="install">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Get Started</span>
+      <h2>Install Quill in 60 seconds</h2>
+      <p>One command on any platform. No configuration needed.</p>
+    </div>
+    <div class="install-tabs">
+      <button class="tab-btn active" onclick="showTab('windows')">🪟 Windows</button>
+      <button class="tab-btn" onclick="showTab('linux')">🐧 Linux / Kali</button>
+      <button class="tab-btn" onclick="showTab('mac')">🍎 macOS</button>
+      <button class="tab-btn" onclick="showTab('pip')">📦 pip</button>
+    </div>
+
+    <div class="tab-content active" id="tab-windows">
+      <div class="install-steps">
+        <div class="install-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Download the zip</h4>
+            <a href="#download" class="btn btn-primary btn-sm">Download quill-lang-2.0.0.zip</a>
+            <p>Extract to your Downloads folder.</p>
+          </div>
+        </div>
+        <div class="install-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Open PowerShell</h4>
+            <p>Press <kbd>Win+X</kbd> → Terminal (or Windows PowerShell)</p>
+          </div>
+        </div>
+        <div class="install-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>Navigate and run</h4>
+            <div class="code-block">
+              <code>cd "C:\Users\YourName\Downloads\quill-lang"</code><br/>
+              <code>powershell -ExecutionPolicy Bypass -File ".\install.ps1"</code>
+            </div>
+          </div>
+        </div>
+        <div class="install-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4>Open a new terminal and verify</h4>
+            <div class="code-block"><code>quill version</code></div>
+          </div>
+        </div>
+      </div>
+      <div class="trouble-box">
+        <h4>⚠️ Common Issues</h4>
+        <ul>
+          <li><strong>Script not digitally signed:</strong> Use <code>powershell -ExecutionPolicy Bypass -File ".\install.ps1"</code></li>
+          <li><strong>quill not found:</strong> Close terminal and open a NEW one — the PATH needs to reload</li>
+          <li><strong>Python not found:</strong> Install Python from python.org — tick <strong>"Add Python to PATH"</strong> on install</li>
+          <li><strong>Space in username errors:</strong> Always wrap paths in double quotes in PowerShell</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-linux">
+      <div class="code-block large">
+        <div class="cb-header">Linux / Kali Linux — One line install</div>
+        <code>curl -sSL https://quill-lang.org/install.sh | bash</code>
+        <br/><br/>
+        <div class="cb-header">Kali Linux optimized</div>
+        <code>sudo apt update &amp;&amp; sudo apt install python3 python3-pip python3-tk -y</code><br/>
+        <code>pip3 install quill-lang customtkinter matplotlib</code>
+        <br/><br/>
+        <div class="cb-header">From zip</div>
+        <code>cd ~/Downloads/quill-lang</code><br/>
+        <code>chmod +x install.sh &amp;&amp; ./install.sh</code><br/>
+        <code>source ~/.bashrc</code><br/>
+        <code>quill version</code>
+      </div>
+      <div class="trouble-box">
+        <h4>⚠️ Common Issues on Linux</h4>
+        <ul>
+          <li><strong>command not found:</strong> Run <code>source ~/.bashrc</code></li>
+          <li><strong>No module tkinter:</strong> <code>sudo apt install python3-tk</code></li>
+          <li><strong>GUI won't start on Kali:</strong> <code>sudo apt install python3-dev python3-tk</code></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-mac">
+      <div class="code-block large">
+        <code>curl -sSL https://quill-lang.org/install.sh | bash</code><br/>
+        <code>source ~/.zshrc</code><br/>
+        <code>quill version</code>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-pip">
+      <div class="code-block large">
+        <code>pip install quill-lang</code><br/>
+        <code>pip install customtkinter matplotlib  # Optional: modern GUI + charts</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Language Tour ───────────────────────────────────────────────── -->
+<section class="section" id="tour">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Language Tour</span>
+      <h2>Everything you need, in plain English</h2>
+    </div>
+    <div class="tour-grid">
+      <div class="tour-item">
+        <h4>Variables</h4>
+        <pre class="tour-code">let name be "Alice".
+let age be 25.
+let active be yes.
+set age to 26.</pre>
+      </div>
+      <div class="tour-item">
+        <h4>Arithmetic</h4>
+        <pre class="tour-code">let total be price times qty.
+let half be total divided by 2.
+let rem be total mod 7.
+let root be square root of 144.</pre>
+      </div>
+      <div class="tour-item">
+        <h4>Conditions</h4>
+        <pre class="tour-code">if age is at least 18.
+  say "Adult.".
+else if age is 17.
+  say "Almost!".
+else.
+  say "Minor.".
+end if.</pre>
+      </div>
+      <div class="tour-item">
+        <h4>Loops</h4>
+        <pre class="tour-code">repeat 5 times.
+  say "Hello!".
+end repeat.
+
+for each item in items.
+  say item.
+end for.</pre>
+      </div>
+      <div class="tour-item">
+        <h4>Functions</h4>
+        <pre class="tour-code">define greet taking name.
+  say "Hello, {name}!".
+end define.
+
+greet with "Alice".</pre>
+      </div>
+      <div class="tour-item">
+        <h4>Lists &amp; Maps</h4>
+        <pre class="tour-code">let fruits be a list of
+  "apple", "banana".
+let p be a map with
+  "name" as "Alice".</pre>
+      </div>
+      <div class="tour-item">
+        <h4>HTTP Requests</h4>
+        <pre class="tour-code">let data be get
+  "https://api.example.com".
+let json be parse data as json.
+say json at "field".</pre>
+      </div>
+      <div class="tour-item">
+        <h4>Database</h4>
+        <pre class="tour-code">connect to database "app.db" as db.
+execute "INSERT ..." on db.
+let rows be query db with "SELECT...".</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Use Cases ───────────────────────────────────────────────────── -->
+<section class="section section-dark" id="fields">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Use Cases</span>
+      <h2>One language, infinite applications</h2>
+    </div>
+    <div class="fields-grid">
+      <div class="field-card" data-color="#4a6cf7">
+        <div class="field-top">
+          <span class="field-icon">🤖</span>
+          <h3>AI &amp; Machine Learning</h3>
+        </div>
+        <ul>
+          <li>Naive Bayes classifiers</li>
+          <li>Linear &amp; logistic regression</li>
+          <li>k-NN classification</li>
+          <li>k-Means clustering</li>
+          <li>Python sklearn interop</li>
+        </ul>
+        <div class="field-example">
+          <code>let model be train naive bayes texts, labels.<br/>
+          let result be predict naive bayes model, "new text".</code>
+        </div>
+      </div>
+
+      <div class="field-card" data-color="#00b894">
+        <div class="field-top">
+          <span class="field-icon">📊</span>
+          <h3>Data Science</h3>
+        </div>
+        <ul>
+          <li>CSV load, filter, sort</li>
+          <li>Statistics: mean, median, std dev</li>
+          <li>Normalization &amp; scaling</li>
+          <li>Matplotlib charts</li>
+          <li>Data pipeline automation</li>
+        </ul>
+        <div class="field-example">
+          <code>let rows be read csv "data.csv".<br/>
+          let avg be average of salaries.</code>
+        </div>
+      </div>
+
+      <div class="field-card" data-color="#fdcb6e">
+        <div class="field-top">
+          <span class="field-icon">🖥️</span>
+          <h3>Desktop Applications</h3>
+        </div>
+        <ul>
+          <li>Dark/light mode themes</li>
+          <li>Charts: bar, line, pie</li>
+          <li>Data tables</li>
+          <li>Progress bars &amp; sliders</li>
+          <li>Dropdowns &amp; toggles</li>
+        </ul>
+        <div class="field-example">
+          <code>create a bar chart named myChart titled "Revenue".<br/>
+          set data of myChart to months, values.</code>
+        </div>
+      </div>
+
+      <div class="field-card" data-color="#e17055">
+        <div class="field-top">
+          <span class="field-icon">🔒</span>
+          <h3>Cybersecurity</h3>
+        </div>
+        <ul>
+          <li>SHA-256, MD5, SHA-512 hashing</li>
+          <li>HMAC signing &amp; verification</li>
+          <li>Password strength checking</li>
+          <li>Port scanning</li>
+          <li>DNS lookup &amp; network tools</li>
+        </ul>
+        <div class="field-example">
+          <code>let hash be hash text "password".<br/>
+          let strength be check password strength "my_pwd".</code>
+        </div>
+      </div>
+
+      <div class="field-card" data-color="#a29bfe">
+        <div class="field-top">
+          <span class="field-icon">🌐</span>
+          <h3>Web Development</h3>
+        </div>
+        <ul>
+          <li>HTTP GET / POST requests</li>
+          <li>JSON API clients</li>
+          <li>Simple HTTP servers</li>
+          <li>REST API building</li>
+          <li>URL parsing &amp; encoding</li>
+        </ul>
+        <div class="field-example">
+          <code>add route "/api", "handleApi".<br/>
+          start server 8080.</code>
+        </div>
+      </div>
+
+      <div class="field-card" data-color="#00cec9">
+        <div class="field-top">
+          <span class="field-icon">🗄️</span>
+          <h3>Database Apps</h3>
+        </div>
+        <ul>
+          <li>SQLite built-in support</li>
+          <li>CREATE, INSERT, UPDATE, DELETE</li>
+          <li>Parameterized queries</li>
+          <li>Row iteration as maps</li>
+          <li>Full CRUD applications</li>
+        </ul>
+        <div class="field-example">
+          <code>connect to database "app.db" as db.<br/>
+          let rows be query db with "SELECT * FROM t".</code>
+        </div>
+      </div>
+
+      <div class="field-card" data-color="#fd79a8">
+        <div class="field-top">
+          <span class="field-icon">⚡</span>
+          <h3>Scripting &amp; Automation</h3>
+        </div>
+        <ul>
+          <li>File system operations</li>
+          <li>Shell command execution</li>
+          <li>Batch file processing</li>
+          <li>Scheduled tasks</li>
+          <li>CSV &amp; JSON processing</li>
+        </ul>
+        <div class="field-example">
+          <code>run command "ls -la" into output.<br/>
+          write output to file "report.txt".</code>
+        </div>
+      </div>
+
+      <div class="field-card" data-color="#55efc4">
+        <div class="field-top">
+          <span class="field-icon">🌍</span>
+          <h3>Networking</h3>
+        </div>
+        <ul>
+          <li>DNS lookup &amp; reverse DNS</li>
+          <li>Port scanning</li>
+          <li>TCP client connections</li>
+          <li>WHOIS lookups</li>
+          <li>IP geolocation</li>
+        </ul>
+        <div class="field-example">
+          <code>let ip be dns lookup "google.com".<br/>
+          let open be is port open "host", 443.</code>
+        </div>
+      </div>
+
+      <div class="field-card" data-color="#74b9ff">
+        <div class="field-top">
+          <span class="field-icon">⛓️</span>
+          <h3>Blockchain</h3>
+        </div>
+        <ul>
+          <li>Proof-of-work mining</li>
+          <li>Block validation</li>
+          <li>Transaction recording</li>
+          <li>Chain integrity checking</li>
+          <li>Educational crypto concepts</li>
+        </ul>
+        <div class="field-example">
+          <code>let hash be add to blockchain "chain", "tx data".<br/>
+          let valid be validate blockchain "chain".</code>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Examples ────────────────────────────────────────────────────── -->
+<section class="section" id="examples">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Examples</span>
+      <h2>See Quill in action</h2>
+    </div>
+    <div class="examples-tabs">
+      <button class="ex-tab active" onclick="showExample('ex1')">Hello World</button>
+      <button class="ex-tab" onclick="showExample('ex2')">GUI App</button>
+      <button class="ex-tab" onclick="showExample('ex3')">AI Classifier</button>
+      <button class="ex-tab" onclick="showExample('ex4')">Database</button>
+      <button class="ex-tab" onclick="showExample('ex5')">Web API</button>
+    </div>
+    <div class="example-panels">
+      <div class="example-panel active" id="ex1">
+        <div class="ex-code-wrap">
+          <div class="code-window">
+            <div class="code-toolbar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="code-filename">hello.ql</span></div>
+            <pre class="code-body"><span class="ql-keyword">say</span> <span class="ql-string">"Hello, World!"</span>.
+
+<span class="ql-keyword">let</span> name <span class="ql-keyword">be</span> <span class="ql-string">"Alice"</span>.
+<span class="ql-keyword">let</span> age <span class="ql-keyword">be</span> 25.
+
+<span class="ql-keyword">if</span> age <span class="ql-op">is at least</span> 18.
+  <span class="ql-keyword">say</span> <span class="ql-string">"Welcome, {name}!"</span>.
+<span class="ql-keyword">else</span>.
+  <span class="ql-keyword">say</span> <span class="ql-string">"Sorry, too young."</span>.
+<span class="ql-end">end if</span>.</pre>
+          </div>
+        </div>
+        <div class="ex-output">
+          <div class="output-header">Output</div>
+          <pre>Hello, World!
+Welcome, Alice!</pre>
+        </div>
+      </div>
+
+      <div class="example-panel" id="ex2">
+        <div class="ex-code-wrap">
+          <div class="code-window">
+            <div class="code-toolbar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="code-filename">counter.ql</span></div>
+            <pre class="code-body"><span class="ql-module">use</span> gui.
+<span class="ql-keyword">set</span> theme <span class="ql-keyword">to</span> <span class="ql-string">"dark"</span>.
+<span class="ql-keyword">open</span> a window titled <span class="ql-string">"Counter"</span>
+  with width 300, height 200.
+
+<span class="ql-keyword">let</span> count <span class="ql-keyword">be</span> 0.
+<span class="ql-keyword">create</span> a label named countLabel
+  saying <span class="ql-string">"Count: 0"</span>.
+<span class="ql-keyword">create</span> a button named addBtn
+  saying <span class="ql-string">"Add 1"</span>
+  that calls addOne.
+
+<span class="ql-keyword">define</span> addOne.
+  <span class="ql-keyword">add</span> 1 to count.
+  <span class="ql-keyword">set</span> the text of countLabel
+    to <span class="ql-string">"Count: {count}"</span>.
+<span class="ql-end">end define</span>.
+<span class="ql-keyword">show</span> window.</pre>
+          </div>
+        </div>
+        <div class="ex-output">
+          <div class="output-header">Result</div>
+          <div class="mock-window">
+            <div class="mock-titlebar">Counter</div>
+            <div class="mock-body">
+              <div class="mock-label" id="mockCount">Count: 0</div>
+              <button class="mock-btn" onclick="incrementMock()">Add 1</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-panel" id="ex3">
+        <div class="ex-code-wrap">
+          <div class="code-window">
+            <div class="code-toolbar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="code-filename">classifier.ql</span></div>
+            <pre class="code-body"><span class="ql-module">use</span> ml.
+
+<span class="ql-keyword">let</span> emails <span class="ql-keyword">be</span> <span class="ql-keyword">a list of</span>
+  <span class="ql-string">"free money win prize click"</span>,
+  <span class="ql-string">"meeting at 9am tomorrow"</span>.
+
+<span class="ql-keyword">let</span> labels <span class="ql-keyword">be</span> <span class="ql-keyword">a list of</span>
+  <span class="ql-string">"spam"</span>, <span class="ql-string">"ham"</span>.
+
+<span class="ql-keyword">let</span> model <span class="ql-keyword">be</span>
+  train naive bayes emails, labels.
+
+<span class="ql-keyword">let</span> result <span class="ql-keyword">be</span>
+  predict naive bayes model,
+  <span class="ql-string">"claim your free gift now"</span>.
+
+<span class="ql-keyword">say</span> <span class="ql-string">"Classification: {result}"</span>.</pre>
+          </div>
+        </div>
+        <div class="ex-output">
+          <div class="output-header">Output</div>
+          <pre>Classification: spam</pre>
+        </div>
+      </div>
+
+      <div class="example-panel" id="ex4">
+        <div class="ex-code-wrap">
+          <div class="code-window">
+            <div class="code-toolbar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="code-filename">todos.ql</span></div>
+            <pre class="code-body"><span class="ql-keyword">connect</span> to database <span class="ql-string">"todos.db"</span>
+  as db.
+
+<span class="ql-keyword">execute</span>
+  <span class="ql-string">"CREATE TABLE IF NOT EXISTS
+  todos (id INTEGER PRIMARY KEY,
+  task TEXT)"</span>
+  on db.
+
+<span class="ql-keyword">execute</span>
+  <span class="ql-string">"INSERT INTO todos (task) VALUES (?)"</span>
+  on db <span class="ql-keyword">with</span> <span class="ql-keyword">a list of</span> <span class="ql-string">"Buy milk"</span>.
+
+<span class="ql-keyword">let</span> rows <span class="ql-keyword">be</span>
+  query db <span class="ql-keyword">with</span> <span class="ql-string">"SELECT task FROM todos"</span>.
+
+<span class="ql-keyword">for each</span> row <span class="ql-keyword">in</span> rows.
+  <span class="ql-keyword">say</span> row at <span class="ql-string">"task"</span>.
+<span class="ql-end">end for</span>.</pre>
+          </div>
+        </div>
+        <div class="ex-output">
+          <div class="output-header">Output</div>
+          <pre>Buy milk</pre>
+        </div>
+      </div>
+
+      <div class="example-panel" id="ex5">
+        <div class="ex-code-wrap">
+          <div class="code-window">
+            <div class="code-toolbar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="code-filename">github.ql</span></div>
+            <pre class="code-body"><span class="ql-keyword">let</span> url <span class="ql-keyword">be</span>
+  <span class="ql-string">"https://api.github.com"</span>
+  joined with <span class="ql-string">"/repos/python/cpython"</span>.
+
+<span class="ql-keyword">let</span> response <span class="ql-keyword">be</span> get url.
+<span class="ql-keyword">let</span> data <span class="ql-keyword">be</span>
+  parse response as json.
+
+<span class="ql-keyword">say</span> <span class="ql-string">"Repo: {data at \"full_name\"}"</span>.
+<span class="ql-keyword">say</span> <span class="ql-string">"Stars: {data at \"stargazers_count\"}"</span>.
+<span class="ql-keyword">say</span> <span class="ql-string">"Language: {data at \"language\"}"</span>.</pre>
+          </div>
+        </div>
+        <div class="ex-output">
+          <div class="output-header">Output</div>
+          <pre>Repo: python/cpython
+Stars: 62,000+
+Language: Python</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Docs ─────────────────────────────────────────────────────────── -->
+<section class="section section-dark" id="docs">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Documentation</span>
+      <h2>Everything you need to know</h2>
+    </div>
+    <div class="docs-grid">
+      <a class="doc-card" href="docs/LANGUAGE_REFERENCE.md">
+        <div class="doc-icon">📖</div>
+        <h3>Language Reference</h3>
+        <p>Complete syntax guide — every keyword, operator, and construct.</p>
+      </a>
+      <a class="doc-card" href="docs/INSTALL_GUIDE.md">
+        <div class="doc-icon">⚙️</div>
+        <h3>Installation Guide</h3>
+        <p>Step-by-step instructions for Windows, Linux, and macOS with troubleshooting.</p>
+      </a>
+      <a class="doc-card" href="examples/">
+        <div class="doc-icon">💡</div>
+        <h3>Examples</h3>
+        <p>30+ working examples across all fields and difficulty levels.</p>
+      </a>
+      <a class="doc-card" href="examples/games/quill_quest/">
+        <div class="doc-icon">🎮</div>
+        <h3>Quill Quest</h3>
+        <p>Learn Quill interactively through 15 game challenges — beginner to master.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Download ─────────────────────────────────────────────────────── -->
+<section class="section" id="download">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Download</span>
+      <h2>Get Quill 2.0</h2>
+      <p>Free and open source. MIT licensed.</p>
+    </div>
+    <div class="download-grid">
+      <div class="download-card primary">
+        <div class="dl-icon">🪟</div>
+        <h3>Windows</h3>
+        <p>Full package with installer, extension, and all examples.</p>
+        <a href="quill-lang-2.0.0.zip" class="btn btn-primary" download>Download .zip</a>
+        <div class="dl-size">~200 KB</div>
+      </div>
+      <div class="download-card">
+        <div class="dl-icon">🐧</div>
+        <h3>Linux / Kali</h3>
+        <p>Same package — runs on Ubuntu, Debian, Kali, Arch.</p>
+        <a href="quill-lang-2.0.0.zip" class="btn btn-ghost" download>Download .zip</a>
+      </div>
+      <div class="download-card">
+        <div class="dl-icon">🍎</div>
+        <h3>macOS</h3>
+        <p>Works on macOS 12+ with Python 3.10+</p>
+        <a href="quill-lang-2.0.0.zip" class="btn btn-ghost" download>Download .zip</a>
+      </div>
+      <div class="download-card">
+        <div class="dl-icon">📦</div>
+        <h3>VS Code Extension</h3>
+        <p>Syntax highlighting, IntelliSense, run button, .ql icon.</p>
+        <a href="quill-lang.vsix" class="btn btn-ghost" download>Download .vsix</a>
+      </div>
+    </div>
+    <div class="pip-install">
+      <p>Or install from pip:</p>
+      <div class="code-block inline"><code>pip install quill-lang</code></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ──────────────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="assets/img/quill-icon.svg" alt="Quill" width="40"/>
+      <div>
+        <div class="footer-name">Quill Language</div>
+        <div class="footer-tagline">"Write code the way you think."</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h5>Language</h5>
+        <a href="#tour">Language Tour</a>
+        <a href="docs/LANGUAGE_REFERENCE.md">Reference</a>
+        <a href="examples/">Examples</a>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <a href="#install">Install</a>
+        <a href="#download">VS Code Extension</a>
+        <a href="examples/games/quill_quest/">Quill Quest Game</a>
+      </div>
+      <div class="footer-col">
+        <h5>Community</h5>
+        <a href="https://github.com/quill-lang/quill">GitHub</a>
+        <a href="LICENSE">MIT License</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright © 2025 <strong>Jero W. Grabo</strong> and the Quill Language Team. MIT License.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
